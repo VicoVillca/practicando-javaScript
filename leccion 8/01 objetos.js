@@ -11,9 +11,9 @@ let persona ={
     }
 }
 
+console.log(persona);
 
-
-for(propiedades in persona){
+for (propiedades in persona){
     console.log(propiedades);
 }
 
@@ -22,5 +22,9 @@ console.log(persona.nombre);
 persona.nombre="Maria";
 console.log(persona.nombre);
 
+
 let v = Object.values(persona);
 console.log(v);
+
+let personaString = JSON.stringify(persona);
+console.log(personaString);
