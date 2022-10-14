@@ -1,30 +1,22 @@
-let persona ={
-    nombre:"Juan",
-    apellido:"Marca",
-    email:"juan@gmail.com",
-    edad:28,
-    nombreCompleto:function(){
-        return this.nombre+" "+this.apellido;
-    },
-    nombreEdad:function(){
-        return this.nombre+" "+this.edad;
-    }
+//imprimir objetos en js
+let persona={
+    nombre:"Abraham",
+    apellido:"Villca",
+    edad:32
 }
+//Opcion 1
 
 console.log(persona);
-
-for (propiedades in persona){
-    console.log(propiedades);
+//opcion 2
+for(elem in persona){
+    console.log(elem);
 }
 
-console.log(persona.nombre);
-
-persona.nombre="Maria";
-console.log(persona.nombre);
-
-
+//opcion 3
 let v = Object.values(persona);
 console.log(v);
 
-let personaString = JSON.stringify(persona);
-console.log(personaString);
+//opcion 4
+let stringPersona = JSON.stringify(persona);
+
+console.log(stringPersona);
