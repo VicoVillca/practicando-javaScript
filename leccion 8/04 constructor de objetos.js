@@ -1,23 +1,16 @@
-console.log("asd");
-function Persona(nombre,apellido,email){
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this.email = email;
+function Persona(nombre, apellido, edad){
+    this.nombre=nombre;
+    this.apellido= apellido;
+    this.edad=edad;
     this.nombreCompleto = function(){
-        return this.nombre+" "+this.apellido;
+        return this.nombre +" "+this.apellido;
     }
 }
 
-let persona = new Persona("Juan", "Mamani","juan@gmail.com");
+let p1 = new Persona("Juan", "Marca", 31);
+let p2 = new Persona("Marcos", "Mamani", 25);
+let p3 = new Persona("Maria", "Arratia", 23);
 
-console.log(persona);
-let persona2 =  new Persona();
-persona2.nombre = "Maria";
-persona2.apellido = "Magali";
-
-console.log(persona2.nombre);
-
-
-console.log(persona.nombreCompleto());
-
-console.log(persona2.nombreCompleto());
+console.log(p1.nombreCompleto());
+console.log(p2.nombreCompleto());
+console.log(p3.nombreCompleto());
