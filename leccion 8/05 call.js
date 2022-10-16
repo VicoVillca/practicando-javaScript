@@ -1,17 +1,15 @@
-let persona1 ={
+let persona ={
     nombre:"Abraham",
     apellido:"Villca",
-    nombreCompleto:function(titulo,año){
-        return titulo+": "+this.nombre+" "+this.apellido+" "+año;
+    nombreCompleto:function(rol,año){
+        return rol+": "+this.nombre+" "+this.apellido+":"+año
     }
 }
-
-let persona2 = {
-    nombre: "Juana",
-    apellido:"Arratia"
+let persona2 ={
+    nombre:"Maria",
+    apellido:"Martines"
 }
 
-console.log(persona1.nombreCompleto("Sr",2022));
+console.log(persona.nombreCompleto("Sr",2022));
 
-console.log(persona1.nombreCompleto.call(persona2, "Sra",2020));
-console.log("HOLA PAPUS");
+console.log(persona.nombreCompleto.call(persona2,"Sra",2000));
