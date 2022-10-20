@@ -33,5 +33,5 @@ class Empleado extends Persona{
 }
 
 let empleado = new Empleado("Marcos","Mamani",5500);
-
-console.log(empleado.);
+empleado.Apellido = "Marca";
+console.log(empleado);
