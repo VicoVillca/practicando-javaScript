@@ -1,37 +1,38 @@
-class Persona{
+class Persona {
+    static contador =0;
     constructor(nombre, apellido){
-        this.nombre = nombre;
-        this.apellido = apellido;
-    }
-    set Nombre(nombre){
         this.nombre= nombre;
-    }
-    get Nombre(){
-        return this.nombre;
-    }
-
-    set Apellido(apellido){
         this.apellido = apellido;
     }
-    get Apellido(){
-        return this.apellido;
+    NombreCompleto(){
+        return this.nombre+" "+this.apellido;
+    }
+    static mostrar(){
+        return "Holap";
+    }
+    static mostrar2(persona){
+        console.log(persona.nombre);
     }
 }
 
 class Empleado extends Persona{
-    constructor(nombre, apellido, sueldo){
+    constructor(nombre,apellido,sueldo){
         super(nombre,apellido);
         this.sueldo = sueldo;
+        Persona.contador++;
+        console.log("Se incrementa el contador en 1");
     }
-
-    get Sueldo(){
-        return this.sueldo;
-    }
-    set Sueldo(sueldo){
-        this.sueldo = sueldo;
+    NombreCompleto(){
+        return super.NombreCompleto()+" "+this.sueldo;
     }
 }
 
-let empleado = new Empleado("Marcos","Mamani",5500);
-empleado.Apellido = "Marca";
-console.log(empleado);
+let empleado = new Empleado("Grabiel","Marquez",2342);
+let empleado2 = new Empleado("Grabiel","Marquez",2342);
+let empleado3 = new Empleado("Grabiel","Marquez",2342);
+empleado.nombre = "Marcelo";
+console.log(empleado.NombreCompleto());
+
+
+
+console.log(Empleado.contador);
